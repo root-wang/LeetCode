@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var myAtoi = function(s) {
+               let a =  parseInt(s);
+               if(isNaN(a)){return 0}
+               else {
+                   if(a >= -Math.pow(2,31) && a <= Math.pow(2,31)-1) return a;
+                   else if(a < 0 ) return -Math.pow(2,31);
+                   else return  Math.pow(2,31)-1;
+               }
+        };
+        console.log(myAtoi("-91283472332"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

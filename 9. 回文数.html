@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+       /* var isPalindrome = function(x) {
+            if(x >= -Math.pow(x,31) && x <= Math.pow(2,31)-1){
+                if(x < 0){
+                    return false;
+                }
+                else{
+                    let stack = [];
+                    let str = x.toString();
+                    for(let i = str.length;i>=0;i--){
+                        stack.push(str[i]);
+                    }
+                    let str1 = stack.join('');
+                    let num = Number(str1);
+                    if(num == x) return true;
+                    else return false;
+                }
+            }
+            else {
+                return false;
+            }
+        };//内存消耗太大了；*/
+        var isPalindrome = function (x){
+                if(x < 0){
+                    return false;
+                }
+                else {
+                    let str = x.toString().split('').reverse().join('');
+                    return x === parseInt(str) && x >= 0;
+                }
+        }
+        /*
+        * 减少了条件分支语句减少执行时间但内存消耗没有大幅降低
+        */
+        console.log(isPalindrome(12321));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
